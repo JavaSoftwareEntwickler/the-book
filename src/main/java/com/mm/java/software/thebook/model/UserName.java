@@ -1,42 +1,43 @@
 package com.mm.java.software.thebook.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity // This tells Hibernate to make a table out of this class
 public class UserName {
-	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Integer id;
 
-	private String name;
+    private String name;
+    private String email;
 
-	private String email;
+    public UserName() {
+    }
 
-	public Integer getId() {
-		return id;
-	}
+    public UserName(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public UserName(Integer id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return this.name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public String getEmail() {
+        return this.email;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
