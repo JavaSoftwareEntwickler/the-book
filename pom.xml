@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.mm.java.software</groupId>
     <artifactId>the-book</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>the-book</name>
     <description>rent a book for free</description>
     <properties>
